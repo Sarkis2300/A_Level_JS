@@ -8,7 +8,7 @@ var second= s % 60;
  
 var result = (hour < 10 ? '0'+hour : hour) + ' годин ' + (minute < 10 ? '0' + minute : minute) + ' хвилин ' + (second    < 10 ? '0' + second : second) + ' секунд ';
 
-console.log(result)
+console.log(result);
 
 /*Створити масив з місяцями і отримати назву поточного місяця з масиву
 Номер поточного місяця можна через функцію (new Date()).getMonth();*/
