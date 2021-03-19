@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*1 exercise*/
+        /*1*/
+        function smile1(str,num){
+            let res='';
+            while (num > 0){
+            res = res + str;
+            num--;
+            } return res;
+        }
+        console.log(smile1('hello',2));
+
+        /*2*/
+        var smile2 = function(string,number){
+            let res='';
+            while (number > 0){
+            res = res + string;
+            number--;
+            } return res;
+        }
+        console.log(smile2('hello',3));
+
+        /*3*/
+        var smile3 = new Function('string2,number2','let res=""; while (number2 > 0){ res = res + string2; number2--; } return res;')
+        console.log(smile3('hello',4));
+
+        /*4*/
+        var smile4 = (string3, number3) => {
+            let res='';
+            while (number3 > 0){
+            res = res + string3;
+            number3--;
+            } return res;}
+            console.log(smile4('hello',5));
+
+    /*2 exercise*/
+        /*1*/
+        function getMin(...obj) {
+            let a = obj[0];
+            for (let i = 0; i < obj.length; i++) {
+            if (obj[i] < a) {
+                a = obj[i];
+            }
+            }
+            return a;
+        }
+
+        console.log(getMin(-12,2,3,4,5));
+
+        /*2*/
+        var getMin2 = function(...obj2) {
+                let a = obj2[0];
+                for (let i = 0; i < obj2.length; i++) {
+                if (obj2[i] < a) {
+                 a = obj2[i];
+             }
+             }
+                return a;
+         }
+
+            console.log(getMin2(-12,2,3,-54,5));
+
+        /*3*/
+        var getMin3 = new Function ("...obj3","let a = obj3[0]; for (let i = 0; i < obj3.length; i++) { if (obj3[i] < a) { a = obj3[i]; } } return a;")
+        console.log(getMin3(0,0,3,54,-1));
+
+        /*4*/
+        var getMin4 = (...obj4) => {
+            let a = obj4[0];
+                for (let i = 0; i < obj4.length; i++) {
+                if (obj4[i] < a) {
+                 a = obj4[i];
+             }
+             }
+                return a;
+        }
+        console.log(getMin4(0,0,3,-954,-1));
+    
+    /*3 exercise*/
+        /*1*/
+        function buildPyramid(amount){
+            for (let i = 1; i <= amount; i++) { 
+                for (let n = i; n < amount; n++) { 
+                    document.write("&nbsp"); 
+                    }
+                for (let k = 0; k < i; k++) { 
+                    document.write('#'); 
+                    }  
+                document.write(" <br/>")
+                }
+        }
+        buildPyramid(7);
+        
+        /*2*/
+        var buildPyramid2 = function(amount2){
+            for (let i = 1; i <= amount2; i++) { 
+                for (let n = i; n < amount2; n++) { 
+                    document.write("&nbsp"); 
+                    }
+                for (let k = 0; k < i; k++) { 
+                    document.write("#"); 
+                    }  
+                document.write(" <br/>")
+                }
+        }
+        buildPyramid2(5);
+
+        /*3*/
+        var buildPyramid3 = new Function('amount3','for (let i = 1; i <= amount3; i++) { for (let n = i; n < amount3; n++) {document.write("&nbsp"); }for (let k = 0; k < i; k++) { document.write("#"); }  document.write(" <br/>")}');
+        buildPyramid3(3);
+
+        /*4*/
+        var buildPyramid4 = (amount4) => {
+            for (let i = 1; i <= amount4; i++) { 
+                for (let n = i; n < amount4; n++) { 
+                    document.write("&nbsp"); 
+                    }
+                for (let k = 0; k < i; k++) { 
+                    document.write("#"); 
+                    }  
+                document.write(" <br/>")
+                }
+        }
+        buildPyramid4(10);
+
+
+    /*4 exercise*/
+        /*1*/
+        function unsplit1 (arr){
+            var result = [].concat(...arr);
+            return result;
+        }
+        console.log(unsplit1([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));
+
+        /*2*/
+        var unsplit2 = function (arr2){
+            var result = [].concat(...arr2);
+            return result;
+        }
+        console.log(unsplit2([[1, 2, 9], [4, 5, 6], [7, 8, 9]]));
+
+        /*3*/
+        var unsplit3 = new Function("arr3","var result = [].concat(...arr3); return result;")
+        console.log(unsplit3([[1, 8, 9], [4, 5, 6], [7, 8, 9]]));
+
+        /*4*/
+        var unsplit4 = (arr4) => {
+            var result = [].concat(...arr4);
+            return result;
+        }
+        console.log(unsplit4([[11, 12, 13], [4, 5, 6], [7, 8, 9]]));
+
+    </script>
+</body>
+</html>
